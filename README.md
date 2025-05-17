@@ -1,13 +1,15 @@
 # 여상형설장학회
 
-<video width="100%" controls>
-    <source src="./preview.mp4" type="video/mp4"></source>
-</video>
+https://github.com/user-attachments/assets/d5c1fa70-3b4c-4e98-ac96-2b1a5e63e3b3
 
 > [**yeosang1978.kr**](http://yeosang1978.kr) 에서 서비스 중  
 > 교내 장학사 요청으로 제작한 장학회 공식 웹페이지입니다.
 >
 > <small>\* 보안이슈로 인해 [클론사이트](https://taeu0818.github.io/yeosang1978)로 Github 업로드</small>
+
+
+
+
 
 ---
 
