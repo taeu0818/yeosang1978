@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="csrf-token" content="yDp9Ym2oIzg2amPvDPzuvDfAZ6gnmOEZfPNs9hjR">
+    <meta name="keywords" content="여상형설장학회,장학회,여수정보과학고등학교">
+    <meta name="description" content="미래를 여는 열쇠, 여러분과 함께합니다.">
+    <meta name="Robots" content="index, follow">
+    <meta property="og:title" content="여상형설장학회">
+    <meta property="og:description" content="미래를 여는 열쇠, 여러분과 함께합니다.">
+    <meta property="og:image" content="http://localhost:8000/og_image.png">
+
+    <meta name="google-site-verification" content="CCyfULBh5F5JmWlSEhpmYNZABgho5wZozdWoUMcOaRM"/>
+
+    <meta name="naver-site-verification" content="9869b213eccba00b2e5593d9e1ef7748bb223705"/>
+    <title>여상형설장학회</title>
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../vendor/fontawesome-6.6.0/css/all.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../../../vendor/ckeditor5/ckeditor5.css">
+    <script type="module" src="http://[::1]:5173/@vite/client"></script><link rel="stylesheet" href="http://[::1]:5173/resources/css/app.css" />    <script src="../../../vendor/jquery-3.7.1.js"></script>
+    <script type="module" src="http://[::1]:5173/@vite/client"></script><script type="module" src="http://[::1]:5173/resources/js/app.js"></script>    <script src="../../../js/app.js"></script>
+        <script type="module" src="../../../js/read.js"></script>
+    <script>
+        $(() => {
+            let delayAni;
+            $(document)
+                .on('mousemove', 'header .main-menu .menu , header .sub-menu .depth', () => {
+                    $('header').addClass('active');
+                    clearTimeout(delayAni);
+                    delayAni = null;
+                })
+                .on('mousemove', ({target}) => {
+                    if ($('header').hasClass('active') && !$(target).closest('.sub-menu .depth, .main-menu .menu').length && !delayAni) {
+                        delayAni = setTimeout(() => {
+                            $('header:not(.open)').removeClass('active');
+                            delayAni = null;
+                        }, 500)
+                    }
+                })
+
+            $(window).scroll(() => {
+                const scrollTop = $(window).scrollTop();
+                const maxHeight = $('main#sub').height() - $('header').height();
+                if (scrollTop >= maxHeight) $('header').addClass('open active');
+                else $('header').removeClass('open active');
+            })
+        })
+    </script>
+    <script>
+        $(() => {
+            $(document).find('#sub-layout')
+                .on('click', '.depth', ({currentTarget: target}) => {
+                    if($(target).hasClass('active')) $(target).removeClass('active');
+                    else $('#sub-layout .depth').removeClass('active').filter(target).addClass('active');
+                    $('#sub-layout .depth:not(.active) .sub-menu').animate({height : 0}, {duration: 300});
+                    const openMenu = $('#sub-layout .depth.active');
+                    openMenu.find('.sub-menu').height(0).animate({height : openMenu.find('.sub-menu')[0].scrollHeight}, {duration:400})
+                })
+        })
+    </script>
+</head>
+<body>
+    <header>
+    <div class="main-menu">
+        <div class="container-xl flex items-center">
+            <div class="w-full">
+                <a href="../../../index.html" class="logo"></a>
+            </div>
+            <div class="flex shrink-0 font-medium" style="font-size: 22px">
+                <a href="../../../about/message.html" class="menu">재단소개</a>
+                <a href="../../../introduce/scholarship.html" class="menu">사업안내</a>
+                <a href="../../../news/notice/index.html" class="menu">소식/자료</a>
+                <a href="../index.html" class="menu">재정/후원</a>
+            </div>
+            <div class="w-full flex justify-end text-lg gap-10">
+                                    <a href="../../../auth/login.html">로그인</a>
+                            </div>
+        </div>
+    </div>
+    <div class="sub-menu">
+        <div class="depth">
+            <a href="../../../about/message.html" class="menu">인사말</a>
+            <a href="../../../about/history.html" class="menu">재단연혁</a>
+            <a href="../../../about/organization.html" class="menu">조직도</a>
+        </div>
+        <div class="depth">
+            <a href="../../../introduce/service.html" class="menu">사업소개</a>
+            <a href="../../../introduce/scholarship.html" class="menu">장학사업</a>
+        </div>
+        <div class="depth">
+            <a href="../../../news/notice/index.html" class="menu">공지사항</a>
+            <a href="../../../news/media/index.html" class="menu">보도자료</a>
+            <a href="../../../news/photo/index.html" class="menu">사진자료</a>
+        </div>
+        <div class="depth">
+            <a href="../index.html" class="menu">결산공지</a>
+            <a href="../../payment/index.html" class="menu">장학금 지급현황</a>
+            <a href="../../donate/index.html" class="menu">후원하기</a>
+        </div>
+    </div>
+</header>
+    <div id="sub-layout">
+    <main id="sub">
+        <img src="../../../resource/images/pages/support/visual.jpg" alt="서브페이지 비주얼 이미지"
+             title="서브페이지 비주얼 이미지">
+        <div>결산공지</div>
+    </main>
+    <div class="path">
+        <div class="container-def flex h-full">
+            <div class="line"></div>
+            <a href="../../../index.html" class="aspect-square text-xl">
+                <i class="fa-solid fa-home"></i>
+            </a>
+            <div class="line"></div>
+            <div class="depth">
+                <div class="flex justify-between items-center w-full">
+                    <div class="text-xl">재정/후원</div>
+                    <i class="fa-solid fa-chevron-down text-lg"></i>
+                </div>
+                <div class="sub-menu">
+                    <div class="p-1.5 gap-1.5 grid">
+                                                    <a href="../../../about/message.html"
+                               class="menu ">재단소개</a>
+                                                    <a href="../../../introduce/service.html"
+                               class="menu ">사업안내</a>
+                                                    <a href="../../../news/notice/index.html"
+                               class="menu ">소식/자료</a>
+                                                    <a href="../index.html"
+                               class="menu active">재정/후원</a>
+                                            </div>
+                </div>
+            </div>
+            <div class="line"></div>
+            <div class="depth">
+                <div class="flex justify-between items-center w-full">
+                    <div class="text-xl">결산공지</div>
+                    <i class="fa-solid fa-chevron-down text-lg"></i>
+                </div>
+                <div class="sub-menu">
+                    <div class="p-1.5 gap-1.5 grid">
+                                                    <a href="../index.html"
+                               class="menu active">결산공지</a>
+                                                    <a href="../../payment/index.html"
+                               class="menu ">장학금 지급 현황</a>
+                                                    <a href="../../donate/index.html"
+                               class="menu ">후원하기</a>
+                                            </div>
+                </div>
+            </div>
+            <div class="line"></div>
+        </div>
+    </div>
+</div>
+    <div id="support_closing">
+        <section>
+            <div class="container-def px-12">
+                <div class="border-y-2 border-gray-500 mb-10">
+                    <div class="border-b-2 py-7 px-10">
+                        <div class="text-3xl font-bold mb-2">[TEST] 테스트용 제목입니다</div>
+                        <div class="flex gap-7 text-lg">
+                            <div class="flex gap-2.5">
+                                <div class="font-semibold">작성자</div>
+                                <div class="text-gray-500">관리자</div>
+                            </div>
+                            <div class="flex gap-2.5">
+                                <div class="font-semibold">조회수</div>
+                                <div class="text-gray-500">101</div>
+                            </div>
+                            <div class="flex gap-2.5">
+                                <div class="font-semibold">등록일</div>
+                                <div class="text-gray-500">2025-05-17</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="py-16 flex justify-center">
+                        <div id="read-editor" class="hidden">
+                            테스트 내용입니다.
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-center">
+                    <a href="../index.html" class="btn btn-main text-lg px-7 py-3">목록으로</a>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer>
+    <div class="container-def grid gap-7">
+        <div class="flex items-end justify-between">
+            <img src="../../../resource/images/logos/logo-w.svg" alt="로고" title="로고" class="logo">
+            <div class="flex gap-3.5">
+                <a href="https://ysed.jne.go.kr"><span>여수교육청</span><i class="fa-solid fa-arrow-right ms-2 -rotate-45"></i></a>
+                <a href="https://yosuis.hs.jne.kr"><span>여수정보과학고등학교</span><i class="fa-solid fa-arrow-right ms-2 -rotate-45"></i></a>
+            </div>
+        </div>
+
+        <div class="w-full h-px bg-gray-500"></div>
+
+        <div>
+            <div class="flex gap-6 mb-2">
+                <div class="flex gap-2.5">
+                    <div class="text-gray-300">주소</div>
+                    <div class="text-white">전남 여수시 도원로 279 (7층)</div>
+                </div>
+                <div class="flex gap-2.5">
+                    <div class="text-gray-300">대표번호</div>
+                    <div class="text-white">061-653-5775</div>
+                </div>
+                <div class="flex gap-2.5">
+                    <div class="text-gray-300">이메일</div>
+                    <div class="text-white">ksb9066@nate.com</div>
+                </div>
+            </div>
+            <div class="text-gray-400">COPYRIGHT(C) 재단법인 여상형설장학회 ALL RIGHTS RESERVED.</div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

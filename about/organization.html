@@ -1,0 +1,563 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="csrf-token" content="yDp9Ym2oIzg2amPvDPzuvDfAZ6gnmOEZfPNs9hjR">
+    <meta name="keywords" content="여상형설장학회,장학회,여수정보과학고등학교">
+    <meta name="description" content="미래를 여는 열쇠, 여러분과 함께합니다.">
+    <meta name="Robots" content="index, follow">
+    <meta property="og:title" content="여상형설장학회">
+    <meta property="og:description" content="미래를 여는 열쇠, 여러분과 함께합니다.">
+    <meta property="og:image" content="http://localhost:8000/og_image.png">
+
+    <meta name="google-site-verification" content="CCyfULBh5F5JmWlSEhpmYNZABgho5wZozdWoUMcOaRM"/>
+
+    <meta name="naver-site-verification" content="9869b213eccba00b2e5593d9e1ef7748bb223705"/>
+    <title>여상형설장학회</title>
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../vendor/fontawesome-6.6.0/css/all.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+        <script type="module" src="http://[::1]:5173/@vite/client"></script><link rel="stylesheet" href="http://[::1]:5173/resources/css/app.css" />    <script src="../vendor/jquery-3.7.1.js"></script>
+    <script type="module" src="http://[::1]:5173/@vite/client"></script><script type="module" src="http://[::1]:5173/resources/js/app.js"></script>    <script src="../js/app.js"></script>
+        <script>
+        $(() => {
+            let delayAni;
+            $(document)
+                .on('mousemove', 'header .main-menu .menu , header .sub-menu .depth', () => {
+                    $('header').addClass('active');
+                    clearTimeout(delayAni);
+                    delayAni = null;
+                })
+                .on('mousemove', ({target}) => {
+                    if ($('header').hasClass('active') && !$(target).closest('.sub-menu .depth, .main-menu .menu').length && !delayAni) {
+                        delayAni = setTimeout(() => {
+                            $('header:not(.open)').removeClass('active');
+                            delayAni = null;
+                        }, 500)
+                    }
+                })
+
+            $(window).scroll(() => {
+                const scrollTop = $(window).scrollTop();
+                const maxHeight = $('main#sub').height() - $('header').height();
+                if (scrollTop >= maxHeight) $('header').addClass('open active');
+                else $('header').removeClass('open active');
+            })
+        })
+    </script>
+    <script>
+        $(() => {
+            $(document).find('#sub-layout')
+                .on('click', '.depth', ({currentTarget: target}) => {
+                    if($(target).hasClass('active')) $(target).removeClass('active');
+                    else $('#sub-layout .depth').removeClass('active').filter(target).addClass('active');
+                    $('#sub-layout .depth:not(.active) .sub-menu').animate({height : 0}, {duration: 300});
+                    const openMenu = $('#sub-layout .depth.active');
+                    openMenu.find('.sub-menu').height(0).animate({height : openMenu.find('.sub-menu')[0].scrollHeight}, {duration:400})
+                })
+        })
+    </script>
+</head>
+<body>
+    <header>
+    <div class="main-menu">
+        <div class="container-xl flex items-center">
+            <div class="w-full">
+                <a href="../index.html" class="logo"></a>
+            </div>
+            <div class="flex shrink-0 font-medium" style="font-size: 22px">
+                <a href="message.html" class="menu">재단소개</a>
+                <a href="../introduce/scholarship.html" class="menu">사업안내</a>
+                <a href="../news/notice/index.html" class="menu">소식/자료</a>
+                <a href="../support/closing/index.html" class="menu">재정/후원</a>
+            </div>
+            <div class="w-full flex justify-end text-lg gap-10">
+                                    <a href="../auth/login.html">로그인</a>
+                            </div>
+        </div>
+    </div>
+    <div class="sub-menu">
+        <div class="depth">
+            <a href="message.html" class="menu">인사말</a>
+            <a href="history.html" class="menu">재단연혁</a>
+            <a href="organization.html" class="menu">조직도</a>
+        </div>
+        <div class="depth">
+            <a href="../introduce/service.html" class="menu">사업소개</a>
+            <a href="../introduce/scholarship.html" class="menu">장학사업</a>
+        </div>
+        <div class="depth">
+            <a href="../news/notice/index.html" class="menu">공지사항</a>
+            <a href="../news/media/index.html" class="menu">보도자료</a>
+            <a href="../news/photo/index.html" class="menu">사진자료</a>
+        </div>
+        <div class="depth">
+            <a href="../support/closing/index.html" class="menu">결산공지</a>
+            <a href="../support/payment/index.html" class="menu">장학금 지급현황</a>
+            <a href="../support/donate/index.html" class="menu">후원하기</a>
+        </div>
+    </div>
+</header>
+    <div id="sub-layout">
+    <main id="sub">
+        <img src="../resource/images/pages/about/visual.jpg" alt="서브페이지 비주얼 이미지"
+             title="서브페이지 비주얼 이미지">
+        <div>조직도</div>
+    </main>
+    <div class="path">
+        <div class="container-def flex h-full">
+            <div class="line"></div>
+            <a href="../index.html" class="aspect-square text-xl">
+                <i class="fa-solid fa-home"></i>
+            </a>
+            <div class="line"></div>
+            <div class="depth">
+                <div class="flex justify-between items-center w-full">
+                    <div class="text-xl">재단소개</div>
+                    <i class="fa-solid fa-chevron-down text-lg"></i>
+                </div>
+                <div class="sub-menu">
+                    <div class="p-1.5 gap-1.5 grid">
+                                                    <a href="message.html"
+                               class="menu active">재단소개</a>
+                                                    <a href="../introduce/service.html"
+                               class="menu ">사업안내</a>
+                                                    <a href="../news/notice/index.html"
+                               class="menu ">소식/자료</a>
+                                                    <a href="../support/closing/index.html"
+                               class="menu ">재정/후원</a>
+                                            </div>
+                </div>
+            </div>
+            <div class="line"></div>
+            <div class="depth">
+                <div class="flex justify-between items-center w-full">
+                    <div class="text-xl">조직도</div>
+                    <i class="fa-solid fa-chevron-down text-lg"></i>
+                </div>
+                <div class="sub-menu">
+                    <div class="p-1.5 gap-1.5 grid">
+                                                    <a href="message.html"
+                               class="menu ">인사말</a>
+                                                    <a href="history.html"
+                               class="menu ">재단연혁</a>
+                                                    <a href="organization.html"
+                               class="menu active">조직도</a>
+                                            </div>
+                </div>
+            </div>
+            <div class="line"></div>
+        </div>
+    </div>
+</div>
+    <div id="about_organization">
+        <section class="organization">
+            <div class="container-def">
+                <div class="font-semibold mb-3 text-3xl">조직도</div>
+                <img src="http://localhost:8000/resource/images/pages/about/조직도.jpg" alt="조직도" title="조직도" class="border">
+            </div>
+        </section>
+        <section>
+            <div class="container-def">
+                <div class="font-semibold mb-3 text-3xl">역대 이사장 및 이사(1대~26대)</div>
+                <table class="tb_1">
+                    <thead>
+                    <tr>
+                        <th>임기</th>
+                        <th>회장</th>
+                        <th>부회장</th>
+                        <th>총무</th>
+                        <th>재무</th>
+                        <th>감사</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>1대</td>
+                        <td>1회 전정식</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>2대</td>
+                        <td>1회 전정식</td>
+                        <td></td>
+                        <td>5회 이재만</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>3대</td>
+                        <td>3회 정성환</td>
+                        <td></td>
+                        <td>10회 제양옥</td>
+                        <td></td>
+                        <td>10회 유경춘</td>
+                    </tr>
+                    <tr>
+                        <td>4대</td>
+                        <td>5회 이재만</td>
+                        <td></td>
+                        <td>6회 김태수</td>
+                        <td></td>
+                        <td>3회 우기봉</td>
+                    </tr>
+                    <tr>
+                        <td>5대</td>
+                        <td>6회 김태수</td>
+                        <td>8회 이세준</td>
+                        <td>10회 유경춘</td>
+                        <td></td>
+                        <td>1회 전정식</td>
+                    </tr>
+                    <tr>
+                        <td>6대</td>
+                        <td>6회 김종철</td>
+                        <td>3회 우기봉</td>
+                        <td>7회 명춘식</td>
+                        <td></td>
+                        <td>5회 박을용</td>
+                    </tr>
+                    <tr>
+                        <td>7대</td>
+                        <td>3회 정이칠</td>
+                        <td>3회 조주열</td>
+                        <td>8회 정일선</td>
+                        <td></td>
+                        <td>8회 정봉갑</td>
+                    </tr>
+                    <tr>
+                        <td>8대</td>
+                        <td>8회 이세준</td>
+                        <td>10회 유경춘</td>
+                        <td>11회 김우성</td>
+                        <td></td>
+                        <td>1회 전정식</td>
+                    </tr>
+                    <tr>
+                        <td>9대</td>
+                        <td>10회 유경춘</td>
+                        <td>8회 박형길</td>
+                        <td>10회 정기선</td>
+                        <td></td>
+                        <td>15회 이우열</td>
+                    </tr>
+                    <tr>
+                        <td>10대</td>
+                        <td>8회 박형길</td>
+                        <td>7회 정봉갑</td>
+                        <td>9회 정일선</td>
+                        <td>13회 윤석조</td>
+                        <td>14회 정해주</td>
+                    </tr>
+                    <tr>
+                        <td>11대</td>
+                        <td></td>
+                        <td>7회 정봉갑</td>
+                        <td>7회 명춘식</td>
+                        <td>12회 배재은</td>
+                        <td>8회 이상선</td>
+                    </tr>
+                    <tr>
+                        <td>12대</td>
+                        <td>18회 박길희</td>
+                        <td></td>
+                        <td>3회 조주열</td>
+                        <td>4회 서성훈</td>
+                        <td>5회 박을용</td>
+                    </tr>
+                    <tr>
+                        <td>13대</td>
+                        <td>12회 마상길</td>
+                        <td>18회 양종열</td>
+                        <td></td>
+                        <td>12회 배재은</td>
+                        <td>8회 이상선</td>
+                    </tr>
+                    <tr>
+                        <td>14대</td>
+                        <td>13회 윤석조</td>
+                        <td>18회 박길희</td>
+                        <td>13회 김수곤</td>
+                        <td>3회 정이칠</td>
+                        <td>7회 명춘식</td>
+                    </tr>
+                    <tr>
+                        <td>15대</td>
+                        <td>8회 김기열</td>
+                        <td>9회 정일선</td>
+                        <td>14회 정해주</td>
+                        <td>17회 심정열</td>
+                        <td>10회 유경춘</td>
+                    </tr>
+                    <tr>
+                        <td>16대</td>
+                        <td>9회 정일선</td>
+                        <td>7회 박초하</td>
+                        <td>11회 김우성</td>
+                        <td>15회 선길현</td>
+                        <td>14회 조의영</td>
+                    </tr>
+                    <tr>
+                        <td>17대</td>
+                        <td>8회 이세준</td>
+                        <td>8회 김기열</td>
+                        <td>13회 김수곤</td>
+                        <td>7회 박초하</td>
+                        <td>11회 임현순</td>
+                    </tr>
+                    <tr>
+                        <td>18대</td>
+                        <td>14회 이강우</td>
+                        <td>7회 정봉갑</td>
+                        <td>7회 박초하</td>
+                        <td>14회 정해주</td>
+                        <td>18회 박길희</td>
+                    </tr>
+                    <tr>
+                        <td>19대</td>
+                        <td>9회 여운영</td>
+                        <td>17회 정승균</td>
+                        <td></td>
+                        <td>8회 이상선</td>
+                        <td>8회 이천기</td>
+                    </tr>
+                    <tr>
+                        <td>20대</td>
+                        <td>15회 선길현</td>
+                        <td>11회 김영준</td>
+                        <td>18회 백영선</td>
+                        <td></td>
+                        <td>11회 김우성</td>
+                    </tr>
+                    <tr>
+                        <td>21대</td>
+                        <td>12회 최병욱</td>
+                        <td>14회 이강우</td>
+                        <td>13회 조문갑</td>
+                        <td>13회 정화진</td>
+                        <td>7회 명춘식</td>
+                    </tr>
+                    <tr>
+                        <td>22대</td>
+                        <td>18회 박길희</td>
+                        <td>12회 장종운</td>
+                        <td>18회 백영선</td>
+                        <td>19회 강인옥</td>
+                        <td>7회 박초하</td>
+                    </tr>
+                    <tr>
+                        <td>23대</td>
+                        <td>14회 정해주</td>
+                        <td>17회 정승균</td>
+                        <td>14회 김형곤</td>
+                        <td>14회 박영복</td>
+                        <td>12회 배재은</td>
+                    </tr>
+                    <tr>
+                        <td>24대</td>
+                        <td>9회 여운영</td>
+                        <td>13회 조문갑</td>
+                        <td>17회 김갑중</td>
+                        <td>22회 김명선</td>
+                        <td>14회 정해주</td>
+                    </tr>
+                    <tr>
+                        <td>25대</td>
+                        <td>13회 윤석조</td>
+                        <td>13회 정화진</td>
+                        <td>22회 김명선</td>
+                        <td>22회 박상규</td>
+                        <td>13회 김수곤</td>
+                    </tr>
+                    <tr>
+                        <td>26대</td>
+                        <td>12회 장종운</td>
+                        <td>11회 김상태</td>
+                        <td>16회 류열은</td>
+                        <td>22회 최재영</td>
+                        <td>18회 박길희</td>
+                    </tr>
+                    <tr>
+                        <td>27대</td>
+                        <td>12회 최병욱</td>
+                        <td>17회 김갑중</td>
+                        <td>21회 박준철</td>
+                        <td>22회 고석민</td>
+                        <td>14회 정해주</td>
+                    </tr>
+                    </tbody>
+
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <div class="container-def">
+                <div class="font-semibold mb-3 text-3xl">역대 이사장 및 이사(27대~37대)</div>
+                <table class="tb_1">
+                    <colgroup>
+                        <col width="7%">
+                        <col width="10%">
+                        <col width="10%">
+                        <col width="10%">
+                        <col width="10%">
+                        <col width="14%">
+                        <col width="10%">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th>임기</th>
+                        <th>이사장</th>
+                        <th>차기 이사장</th>
+                        <th>사무국장</th>
+                        <th>재무</th>
+                        <th>사무차장</th>
+                        <th>감사</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>27대</td>
+                        <td>12회 선길현</td>
+                        <td>17회 정승균</td>
+                        <td>15회 최용채</td>
+                        <td>21회 김성복</td>
+                        <td></td>
+                        <td>12회 배재은 / 12회 장종운</td>
+                    </tr>
+                    <tr>
+                        <td>28대</td>
+                        <td>17회 정승균</td>
+                        <td>14회 이강우</td>
+                        <td>21회 김성복</td>
+                        <td>24회 황성연</td>
+                        <td></td>
+                        <td>9회 여운영 / 12회 장종운</td>
+                    </tr>
+                    <tr>
+                        <td>29대</td>
+                        <td>14회 이강우</td>
+                        <td>13회 정화진</td>
+                        <td>22회 최재영</td>
+                        <td>21회 황성순</td>
+                        <td></td>
+                        <td>9회 여운영 / 12회 최병욱</td>
+                    </tr>
+                    <tr>
+                        <td>30대</td>
+                        <td>13회 정화진</td>
+                        <td>14회 박영복</td>
+                        <td>17회 이명준</td>
+                        <td>26회 김태균</td>
+                        <td></td>
+                        <td>9회 여운영 / 15회 선길현 <br>/ 14회 이강우</td>
+                    </tr>
+                    <tr>
+                        <td>31대</td>
+                        <td>14회 박영복</td>
+                        <td>17회 이명준</td>
+                        <td>22회 박상규</td>
+                        <td>34회 박현욱</td>
+                        <td></td>
+                        <td>9회 여운영 / 13회 정화진 <br>/ 17회 정승균</td>
+                    </tr>
+                    <tr>
+                        <td>32대</td>
+                        <td>17회 이명준</td>
+                        <td>18회 백영선</td>
+                        <td>22회 이종섭</td>
+                        <td>34회 박현욱</td>
+                        <td></td>
+                        <td>13회 정화진 / 14회 박영복</td>
+                    </tr>
+                    <tr>
+                        <td>33대</td>
+                        <td>18회 백영선</td>
+                        <td></td>
+                        <td>22회 김명선</td>
+                        <td>35회 곽여경</td>
+                        <td></td>
+                        <td>14회 이강우 / 17회 이명준</td>
+                    </tr>
+                    <tr>
+                        <td>34대</td>
+                        <td>22회 최재영</td>
+                        <td></td>
+                        <td>24회 황성연</td>
+                        <td>24회 최무용</td>
+                        <td></td>
+                        <td>14회 이강우 / 18회 백영선</td>
+                    </tr>
+                    <tr>
+                        <td>35대</td>
+                        <td>22회 이종섭</td>
+                        <td></td>
+                        <td>29회 박중기</td>
+                        <td>25회 박혜숙</td>
+                        <td></td>
+                        <td>18회 백영선 / 22회 최재영</td>
+                    </tr>
+                    <tr>
+                        <td>36대</td>
+                        <td>24회 강종성</td>
+                        <td></td>
+                        <td>29회 박중기</td>
+                        <td>35회 곽여경</td>
+                        <td></td>
+                        <td>22회 최재영 / 22회 이종섭</td>
+                    </tr>
+                    <tr>
+                        <td>37대</td>
+                        <td>21회 김성복</td>
+                        <td></td>
+                        <td>28회 홍명우 / 28회 박기창</td>
+                        <td>24회 박종혁 / 30회 정혜수</td>
+                        <td>35회 정중관 / 32회 여상섭 <br>/ 34회 백희순 / 42회 이은매</td>
+                        <td>22회 이종섭 / 21회 황성순</td>
+                    </tr>
+                    </tbody>
+
+                </table>
+            </div>
+        </section>
+    </div>
+    <footer>
+    <div class="container-def grid gap-7">
+        <div class="flex items-end justify-between">
+            <img src="../resource/images/logos/logo-w.svg" alt="로고" title="로고" class="logo">
+            <div class="flex gap-3.5">
+                <a href="https://ysed.jne.go.kr"><span>여수교육청</span><i class="fa-solid fa-arrow-right ms-2 -rotate-45"></i></a>
+                <a href="https://yosuis.hs.jne.kr"><span>여수정보과학고등학교</span><i class="fa-solid fa-arrow-right ms-2 -rotate-45"></i></a>
+            </div>
+        </div>
+
+        <div class="w-full h-px bg-gray-500"></div>
+
+        <div>
+            <div class="flex gap-6 mb-2">
+                <div class="flex gap-2.5">
+                    <div class="text-gray-300">주소</div>
+                    <div class="text-white">전남 여수시 도원로 279 (7층)</div>
+                </div>
+                <div class="flex gap-2.5">
+                    <div class="text-gray-300">대표번호</div>
+                    <div class="text-white">061-653-5775</div>
+                </div>
+                <div class="flex gap-2.5">
+                    <div class="text-gray-300">이메일</div>
+                    <div class="text-white">ksb9066@nate.com</div>
+                </div>
+            </div>
+            <div class="text-gray-400">COPYRIGHT(C) 재단법인 여상형설장학회 ALL RIGHTS RESERVED.</div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

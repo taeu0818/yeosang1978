@@ -1,0 +1,1770 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="csrf-token" content="yDp9Ym2oIzg2amPvDPzuvDfAZ6gnmOEZfPNs9hjR">
+    <meta name="keywords" content="여상형설장학회,장학회,여수정보과학고등학교">
+    <meta name="description" content="미래를 여는 열쇠, 여러분과 함께합니다.">
+    <meta name="Robots" content="index, follow">
+    <meta property="og:title" content="여상형설장학회">
+    <meta property="og:description" content="미래를 여는 열쇠, 여러분과 함께합니다.">
+    <meta property="og:image" content="http://localhost:8000/og_image.png">
+
+    <meta name="google-site-verification" content="CCyfULBh5F5JmWlSEhpmYNZABgho5wZozdWoUMcOaRM"/>
+
+    <meta name="naver-site-verification" content="9869b213eccba00b2e5593d9e1ef7748bb223705"/>
+    <title>여상형설장학회</title>
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../vendor/fontawesome-6.6.0/css/all.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+        <script type="module" src="http://[::1]:5173/@vite/client"></script><link rel="stylesheet" href="http://[::1]:5173/resources/css/app.css" />    <script src="../vendor/jquery-3.7.1.js"></script>
+    <script type="module" src="http://[::1]:5173/@vite/client"></script><script type="module" src="http://[::1]:5173/resources/js/app.js"></script>    <script src="../js/app.js"></script>
+        <script>
+        $(() => {
+            let delayAni;
+            $(document)
+                .on('mousemove', 'header .main-menu .menu , header .sub-menu .depth', () => {
+                    $('header').addClass('active');
+                    clearTimeout(delayAni);
+                    delayAni = null;
+                })
+                .on('mousemove', ({target}) => {
+                    if ($('header').hasClass('active') && !$(target).closest('.sub-menu .depth, .main-menu .menu').length && !delayAni) {
+                        delayAni = setTimeout(() => {
+                            $('header:not(.open)').removeClass('active');
+                            delayAni = null;
+                        }, 500)
+                    }
+                })
+
+            $(window).scroll(() => {
+                const scrollTop = $(window).scrollTop();
+                const maxHeight = $('main#sub').height() - $('header').height();
+                if (scrollTop >= maxHeight) $('header').addClass('open active');
+                else $('header').removeClass('open active');
+            })
+        })
+    </script>
+    <script>
+        $(() => {
+            $(document).find('#sub-layout')
+                .on('click', '.depth', ({currentTarget: target}) => {
+                    if($(target).hasClass('active')) $(target).removeClass('active');
+                    else $('#sub-layout .depth').removeClass('active').filter(target).addClass('active');
+                    $('#sub-layout .depth:not(.active) .sub-menu').animate({height : 0}, {duration: 300});
+                    const openMenu = $('#sub-layout .depth.active');
+                    openMenu.find('.sub-menu').height(0).animate({height : openMenu.find('.sub-menu')[0].scrollHeight}, {duration:400})
+                })
+        })
+    </script>
+</head>
+<body>
+    <header>
+    <div class="main-menu">
+        <div class="container-xl flex items-center">
+            <div class="w-full">
+                <a href="../index.html" class="logo"></a>
+            </div>
+            <div class="flex shrink-0 font-medium" style="font-size: 22px">
+                <a href="message.html" class="menu">재단소개</a>
+                <a href="../introduce/scholarship.html" class="menu">사업안내</a>
+                <a href="../news/notice/index.html" class="menu">소식/자료</a>
+                <a href="../support/closing/index.html" class="menu">재정/후원</a>
+            </div>
+            <div class="w-full flex justify-end text-lg gap-10">
+                                    <a href="../auth/login.html">로그인</a>
+                            </div>
+        </div>
+    </div>
+    <div class="sub-menu">
+        <div class="depth">
+            <a href="message.html" class="menu">인사말</a>
+            <a href="history.html" class="menu">재단연혁</a>
+            <a href="organization.html" class="menu">조직도</a>
+        </div>
+        <div class="depth">
+            <a href="../introduce/service.html" class="menu">사업소개</a>
+            <a href="../introduce/scholarship.html" class="menu">장학사업</a>
+        </div>
+        <div class="depth">
+            <a href="../news/notice/index.html" class="menu">공지사항</a>
+            <a href="../news/media/index.html" class="menu">보도자료</a>
+            <a href="../news/photo/index.html" class="menu">사진자료</a>
+        </div>
+        <div class="depth">
+            <a href="../support/closing/index.html" class="menu">결산공지</a>
+            <a href="../support/payment/index.html" class="menu">장학금 지급현황</a>
+            <a href="../support/donate/index.html" class="menu">후원하기</a>
+        </div>
+    </div>
+</header>
+    <div id="sub-layout">
+    <main id="sub">
+        <img src="../resource/images/pages/about/visual.jpg" alt="서브페이지 비주얼 이미지"
+             title="서브페이지 비주얼 이미지">
+        <div>재단연혁</div>
+    </main>
+    <div class="path">
+        <div class="container-def flex h-full">
+            <div class="line"></div>
+            <a href="../index.html" class="aspect-square text-xl">
+                <i class="fa-solid fa-home"></i>
+            </a>
+            <div class="line"></div>
+            <div class="depth">
+                <div class="flex justify-between items-center w-full">
+                    <div class="text-xl">재단소개</div>
+                    <i class="fa-solid fa-chevron-down text-lg"></i>
+                </div>
+                <div class="sub-menu">
+                    <div class="p-1.5 gap-1.5 grid">
+                                                    <a href="message.html"
+                               class="menu active">재단소개</a>
+                                                    <a href="../introduce/service.html"
+                               class="menu ">사업안내</a>
+                                                    <a href="../news/notice/index.html"
+                               class="menu ">소식/자료</a>
+                                                    <a href="../support/closing/index.html"
+                               class="menu ">재정/후원</a>
+                                            </div>
+                </div>
+            </div>
+            <div class="line"></div>
+            <div class="depth">
+                <div class="flex justify-between items-center w-full">
+                    <div class="text-xl">재단연혁</div>
+                    <i class="fa-solid fa-chevron-down text-lg"></i>
+                </div>
+                <div class="sub-menu">
+                    <div class="p-1.5 gap-1.5 grid">
+                                                    <a href="message.html"
+                               class="menu ">인사말</a>
+                                                    <a href="history.html"
+                               class="menu active">재단연혁</a>
+                                                    <a href="organization.html"
+                               class="menu ">조직도</a>
+                                            </div>
+                </div>
+            </div>
+            <div class="line"></div>
+        </div>
+    </div>
+</div>
+    <div id="about_history">
+        <section>
+            <div class="container-def">
+                <div class="flex justify-center">
+                    <img src="../resource/images/logos/symbol.svg" alt="심볼 로고" title="심볼 로고" class="">
+                </div>
+                <div class="wrapper">
+                                            <div class="area">
+                            <div class="point">
+                                <div class="circle">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div class="line"></div>
+                            </div>
+                            <div>
+                                <div class="year">2024</div>
+                                <div class="flex flex-col gap-0.5 content">
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">01</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">재학생 9명에게 장학금 ₩4,500,000 전달</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">01</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">우수 신입생 국외 현장체험 12명에게 장학금 ₩10,000,000 전달</div>
+                                        </div>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <div class="area">
+                            <div class="point">
+                                <div class="circle">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div class="line"></div>
+                            </div>
+                            <div>
+                                <div class="year">2023</div>
+                                <div class="flex flex-col gap-0.5 content">
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">12</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">형설 가족 송년의 밤 개최</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">10</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">가을 나들이 행사 실시</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">05</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">춘계 등반대회 실시</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">01</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">김성복 동문 (37대 이사장) 선임</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">01</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">재학생 23명에게 장학금 ₩11,500,000 전달</div>
+                                        </div>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <div class="area">
+                            <div class="point">
+                                <div class="circle">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div class="line"></div>
+                            </div>
+                            <div>
+                                <div class="year">2022</div>
+                                <div class="flex flex-col gap-0.5 content">
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">12</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">이사장 이·취임식 및 송년의 밤 개최</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">10</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">추계 등반대회 실시</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">06</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">춘계 등반대회 실시</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">01</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">강종성 동문 (36대 이사장) 선임</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">01</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">재학생 10명에게 장학금 ₩10,000,000 전달</div>
+                                        </div>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <div class="area">
+                            <div class="point">
+                                <div class="circle">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div class="line"></div>
+                            </div>
+                            <div>
+                                <div class="year">2021</div>
+                                <div class="flex flex-col gap-0.5 content">
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">12</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">이사장 이·취임식 및 송년의 밤 개최 (코로나 19로 행사 취소)</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">01</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">재학생 10명에게 장학금 ₩10,000,000 전달</div>
+                                        </div>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <div class="area">
+                            <div class="point">
+                                <div class="circle">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div class="line"></div>
+                            </div>
+                            <div>
+                                <div class="year">2020</div>
+                                <div class="flex flex-col gap-0.5 content">
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">12</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">송년의 밤 개최 (코로나 19로 행사 취소)</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">01</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">이종섭 동문 (35대 이사장) 선임</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">01</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">재학생 10명에게 장학금 ₩10,000,000 전달</div>
+                                        </div>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <div class="area">
+                            <div class="point">
+                                <div class="circle">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div class="line"></div>
+                            </div>
+                            <div>
+                                <div class="year">2019</div>
+                                <div class="flex flex-col gap-0.5 content">
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">12</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">이사장 이·취임식 및 송년의 밤 개최</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">10</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">추계 등반대회 실시</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">04</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">춘계 등반대회 실시</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">01</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">재학생 10명에게 장학금 ₩10,000,000 전달</div>
+                                        </div>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <div class="area">
+                            <div class="point">
+                                <div class="circle">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div class="line"></div>
+                            </div>
+                            <div>
+                                <div class="year">2018</div>
+                                <div class="flex flex-col gap-0.5 content">
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">12</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">송년의 밤 개최</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">11</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">추계 등반대회 실시</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">10</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">모교 60주년 기념 식수 ₩1,000,000 지원</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">06</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">춘계 등반대회 실시</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">01</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">최재영 동문 (34대 이사장) 선임</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">01</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">재학생 7명에게 장학금 ₩7,000,000 전달</div>
+                                        </div>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <div class="area">
+                            <div class="point">
+                                <div class="circle">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div class="line"></div>
+                            </div>
+                            <div>
+                                <div class="year">2017</div>
+                                <div class="flex flex-col gap-0.5 content">
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">12</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">이사장 이·취임식 및 송년의 밤 개최</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">11</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">추계 등반대회 실시</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">01</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">재학생 20명에게 장학금 ₩10,000,000 전달</div>
+                                        </div>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <div class="area">
+                            <div class="point">
+                                <div class="circle">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div class="line"></div>
+                            </div>
+                            <div>
+                                <div class="year">2016</div>
+                                <div class="flex flex-col gap-0.5 content">
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">12</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">송년의 밤 개최</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">11</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">추계 가족동반 여행 실시</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">06</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">춘계 산행 실시</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">01</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">백영선 동문 (33대 이사장) 선임</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">01</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">재학생 18명에게 장학금 ₩9,500,000 전달</div>
+                                        </div>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <div class="area">
+                            <div class="point">
+                                <div class="circle">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div class="line"></div>
+                            </div>
+                            <div>
+                                <div class="year">2015</div>
+                                <div class="flex flex-col gap-0.5 content">
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">12</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">이사장 이·취임식 및 송년의 밤 개최</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">11</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">추계 등반대회 실시</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">05</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">춘계 등반대회 실시</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">01</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">재학생 18명에게 장학금 ₩10,000,000 전달</div>
+                                        </div>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <div class="area">
+                            <div class="point">
+                                <div class="circle">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div class="line"></div>
+                            </div>
+                            <div>
+                                <div class="year">2014</div>
+                                <div class="flex flex-col gap-0.5 content">
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">12</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">송년의 밤 개최</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">11</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">추계 등반대회 실시</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">04</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">춘계 등반대회 실시</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">01</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">이명준 동문 (32대 이사장) 선임</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">01</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">재학생 7명에게 장학금 ₩4,000,000 전달</div>
+                                        </div>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <div class="area">
+                            <div class="point">
+                                <div class="circle">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div class="line"></div>
+                            </div>
+                            <div>
+                                <div class="year">2013</div>
+                                <div class="flex flex-col gap-0.5 content">
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">12</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">이사장 이·취임식 및 송년의 밤 개최</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">10</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">추계 가족 행사 실시</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">04</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">춘계 가족 행사 실시</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">01</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">재학생 10명에게 장학금 ₩9,000,000 전달</div>
+                                        </div>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <div class="area">
+                            <div class="point">
+                                <div class="circle">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div class="line"></div>
+                            </div>
+                            <div>
+                                <div class="year">2012</div>
+                                <div class="flex flex-col gap-0.5 content">
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">12</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">재학생 10명에게 장학금 ₩10,000,000 전달</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">12</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">송년의 밤 개최</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">11</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">추계 등반대회 실시</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">04</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">춘계 가족 행사 실시</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">01</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">재단법인 출연금 ₩140,000,000 + 기본재산 증자 ₩60,000,000</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">01</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">박영복 동문 (31대 이사장) 선임</div>
+                                        </div>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <div class="area">
+                            <div class="point">
+                                <div class="circle">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div class="line"></div>
+                            </div>
+                            <div>
+                                <div class="year">2011</div>
+                                <div class="flex flex-col gap-0.5 content">
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">12</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">이사장 이·취임식 및 송년의 밤</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">10</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">추계 등반대회</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">04</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">춘계 등반행사</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">01</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">재학생 18명 ₩9,000,000</div>
+                                        </div>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <div class="area">
+                            <div class="point">
+                                <div class="circle">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div class="line"></div>
+                            </div>
+                            <div>
+                                <div class="year">2010</div>
+                                <div class="flex flex-col gap-0.5 content">
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">12</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">송년의 밤 개최</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">10</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">추계 등반대회</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">04</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">춘계 등반대회</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">01</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">정화진 동문 30대 이사장 선임</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">01</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">재학생 18명 ₩9,000,000</div>
+                                        </div>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <div class="area">
+                            <div class="point">
+                                <div class="circle">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div class="line"></div>
+                            </div>
+                            <div>
+                                <div class="year">2009</div>
+                                <div class="flex flex-col gap-0.5 content">
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">12</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">송년의 밤 및 이사장 이·취임식</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">09</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">추계 등반대회</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">04</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">춘계 등반행사</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">01</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">재학생 18명 ₩9,000,000</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">01</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">명예 회원제 도입 (4명)</div>
+                                        </div>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <div class="area">
+                            <div class="point">
+                                <div class="circle">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div class="line"></div>
+                            </div>
+                            <div>
+                                <div class="year">2008</div>
+                                <div class="flex flex-col gap-0.5 content">
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">12</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">송년의 밤 개최</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">11</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">추계 등반대회</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">06</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">춘계 체육대회 및 가족 오락회</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">01</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">이강우 동문 29대 이사장 선임</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">01</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">재학생 18명 ₩9,000,000</div>
+                                        </div>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <div class="area">
+                            <div class="point">
+                                <div class="circle">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div class="line"></div>
+                            </div>
+                            <div>
+                                <div class="year">2007</div>
+                                <div class="flex flex-col gap-0.5 content">
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">12</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">이사장 이·취임식 및 송년의 밤</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">11</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">추계 등반대회</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">06</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">춘계 체육대회</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">01</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">재학생 11명 ₩5,500,000, 대학생 3명 ₩3,000,000</div>
+                                        </div>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <div class="area">
+                            <div class="point">
+                                <div class="circle">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div class="line"></div>
+                            </div>
+                            <div>
+                                <div class="year">2006</div>
+                                <div class="flex flex-col gap-0.5 content">
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">12</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">송년의 밤</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">11</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">추계 등반대회</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">06</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">춘계 등반대회</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">01</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">정승균 동문 28대 이사장 선임</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">01</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">재학생 11명 ₩5,500,000, 대학생 3명 ₩4,500,000</div>
+                                        </div>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <div class="area">
+                            <div class="point">
+                                <div class="circle">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div class="line"></div>
+                            </div>
+                            <div>
+                                <div class="year">2005</div>
+                                <div class="flex flex-col gap-0.5 content">
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">12</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">이사장 이·취임식 및 송년의 밤 </div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">11</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">추계 등반대회</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">06</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">춘계 체육대회</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">01</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">재학생 11명 ₩5,500,000, 대학생 3명 ₩3,000,000</div>
+                                        </div>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <div class="area">
+                            <div class="point">
+                                <div class="circle">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div class="line"></div>
+                            </div>
+                            <div>
+                                <div class="year">2004</div>
+                                <div class="flex flex-col gap-0.5 content">
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">12</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">특별 강사 초청의 밤</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">11</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">추계 등반대회</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">06</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">춘계 등반대회</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">01</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">선길현 동문 27대 이사장 선임</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">01</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">재학생 11명 ₩5,500,000, 대학생 3명 ₩4,500,000</div>
+                                        </div>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <div class="area">
+                            <div class="point">
+                                <div class="circle">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div class="line"></div>
+                            </div>
+                            <div>
+                                <div class="year">2003</div>
+                                <div class="flex flex-col gap-0.5 content">
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">11</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">추계 등반대회</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">06</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">춘계 체육대회</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">02</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">송년의 밤 및 회장 이·취임식</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">01</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">최병욱 동문 26대 이사장 선임</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">01</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">재학생 11명 ₩5,500,000, 대학생 3명 ₩4,500,000</div>
+                                        </div>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <div class="area">
+                            <div class="point">
+                                <div class="circle">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div class="line"></div>
+                            </div>
+                            <div>
+                                <div class="year">2002</div>
+                                <div class="flex flex-col gap-0.5 content">
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">12</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">송년의 밤 및 회장 이·취임식</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">11</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">추계 등반대회 실시</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">06</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">춘계 등반대회 실시</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">01</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">장종운 동문 25대 이사장 선임</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">01</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">재학생 11명 ₩5,500,000, 대학생 3명 ₩4,500,000 전달</div>
+                                        </div>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <div class="area">
+                            <div class="point">
+                                <div class="circle">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div class="line"></div>
+                            </div>
+                            <div>
+                                <div class="year">2001</div>
+                                <div class="flex flex-col gap-0.5 content">
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">12</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">송년의 밤 및 회장 이·취임식</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">11</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">추계 등반대회 실시</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">06</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">춘계 등반대회 실시</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">01</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">윤석조 동문 24대 이사장 선임</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">01</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">재학생 11명 ₩5,500,000, 대학생 2명 ₩3,000,000 전달</div>
+                                        </div>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <div class="area">
+                            <div class="point">
+                                <div class="circle">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div class="line"></div>
+                            </div>
+                            <div>
+                                <div class="year">2000</div>
+                                <div class="flex flex-col gap-0.5 content">
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">12</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">송년의 밤 및 회장 이·취임식</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">11</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">추계 등반대회 실시</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">06</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">춘계 등반대회 실시</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">01</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">여운영 동문 23대 이사장 선임</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">01</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">재학생 11명 ₩5,500,000, 대학생 2명 ₩3,000,000 전달</div>
+                                        </div>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <div class="area">
+                            <div class="point">
+                                <div class="circle">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div class="line"></div>
+                            </div>
+                            <div>
+                                <div class="year">1999</div>
+                                <div class="flex flex-col gap-0.5 content">
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">12</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">송년의 밤 및 회장 이·취임식 개최</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">11</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">추계 등반대회 실시</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">06</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">춘계 등반대회 실시</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">01</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">정해주 동문 22대 회장 선임</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">01</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">재학생 14명에게 ₩7,000,000, 대학생 2명에게 ₩1,200,000 장학금 전달</div>
+                                        </div>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <div class="area">
+                            <div class="point">
+                                <div class="circle">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div class="line"></div>
+                            </div>
+                            <div>
+                                <div class="year">1998</div>
+                                <div class="flex flex-col gap-0.5 content">
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">12</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">송년의 밤 및 회장 이·취임식 개최</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">11</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">추계 등반대회 실시</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">06</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">춘계 등반대회 실시</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">01</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">박길희 동문 21대 회장 선임</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">01</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">재학생 6명에게 ₩4,585,200, 대학생 3명에게 ₩3,000,000 장학금 전달</div>
+                                        </div>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <div class="area">
+                            <div class="point">
+                                <div class="circle">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div class="line"></div>
+                            </div>
+                            <div>
+                                <div class="year">1997</div>
+                                <div class="flex flex-col gap-0.5 content">
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">12</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">재단법인 설립 및 장학사업 확대</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">11</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">추계 등반대회 실시</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">06</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">춘계 등반대회 실시</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">01</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">김수곤 동문 20대 회장 선임</div>
+                                        </div>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <div class="area">
+                            <div class="point">
+                                <div class="circle">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div class="line"></div>
+                            </div>
+                            <div>
+                                <div class="year">1996</div>
+                                <div class="flex flex-col gap-0.5 content">
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">12</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">송년의 밤 개최</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">11</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">추계 등반대회 실시</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">06</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">춘계 등반대회 실시</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">01</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">김우성 동문 19대 회장 선임</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">01</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">재학생 6명에게 ₩4,542,000, 대학생 3명에게 ₩3,000,000 장학금 전달</div>
+                                        </div>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <div class="area">
+                            <div class="point">
+                                <div class="circle">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div class="line"></div>
+                            </div>
+                            <div>
+                                <div class="year">1995</div>
+                                <div class="flex flex-col gap-0.5 content">
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">12</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">송년의 밤 개최</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">11</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">추계 등반대회 실시</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">06</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">춘계 등반대회 실시</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">01</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">이상선 동문 18대 회장 선임</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">01</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">재학생 6명에게 ₩4,318,800, 대학생 4명에게 ₩3,200,000 장학금 전달</div>
+                                        </div>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <div class="area">
+                            <div class="point">
+                                <div class="circle">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div class="line"></div>
+                            </div>
+                            <div>
+                                <div class="year">1994</div>
+                                <div class="flex flex-col gap-0.5 content">
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">11</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">추계 등반대회 실시</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">08</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">하계 단합대회 및 최초 회원 수첩 제작</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">06</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">춘계 등반대회 실시</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">01</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">박초하 동문 17대 회장 선임</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">01</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">재학생 6명에게 ₩4,144,200, 대학생 4명에게 ₩2,400,000 장학금 전달</div>
+                                        </div>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <div class="area">
+                            <div class="point">
+                                <div class="circle">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div class="line"></div>
+                            </div>
+                            <div>
+                                <div class="year">1993</div>
+                                <div class="flex flex-col gap-0.5 content">
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">11</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">추계 등반대회 실시</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">06</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">춘계 등반대회 실시</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">01</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">김기열 동문 16대 회장 선임</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">01</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">재학생 3명에게 ₩1,859,880, 대학생 4명에게 ₩2,400,000 장학금 전달</div>
+                                        </div>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <div class="area">
+                            <div class="point">
+                                <div class="circle">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div class="line"></div>
+                            </div>
+                            <div>
+                                <div class="year">1992</div>
+                                <div class="flex flex-col gap-0.5 content">
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">10</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">추계 등반대회 실시</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">06</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">춘계 가족 체육대회</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">01</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">정일선 동문 15대 회장 선임</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">01</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">재학생 3명에게 ₩1,442,000, 대학생 2명에게 ₩1,200,000 장학금 전달</div>
+                                        </div>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <div class="area">
+                            <div class="point">
+                                <div class="circle">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div class="line"></div>
+                            </div>
+                            <div>
+                                <div class="year">1991</div>
+                                <div class="flex flex-col gap-0.5 content">
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">10</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">추계 등반대회 실시</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">06</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">춘계 가족 체육대회</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">01</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">명춘식 동문 14대 회장 선임</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">01</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">재학생 3명에게 ₩1,363,450, 대학생 2명에게 ₩1,200,000 장학금 전달</div>
+                                        </div>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <div class="area">
+                            <div class="point">
+                                <div class="circle">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div class="line"></div>
+                            </div>
+                            <div>
+                                <div class="year">1990</div>
+                                <div class="flex flex-col gap-0.5 content">
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">01</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">배재은 동문 13대 회장 선임</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">01</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">재학생 3명에게 ₩1,242,000, 대학생 1명에게 ₩1,000,000 장학금 전달</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">01</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">춘계 가족 체육대회 및 추계 등반대회 실시</div>
+                                        </div>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <div class="area">
+                            <div class="point">
+                                <div class="circle">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div class="line"></div>
+                            </div>
+                            <div>
+                                <div class="year">1989</div>
+                                <div class="flex flex-col gap-0.5 content">
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">01</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">조주열 동문 12대 회장 선임</div>
+                                        </div>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <div class="area">
+                            <div class="point">
+                                <div class="circle">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div class="line"></div>
+                            </div>
+                            <div>
+                                <div class="year">1988</div>
+                                <div class="flex flex-col gap-0.5 content">
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">01</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">정봉갑 동문 11대 회장 선임</div>
+                                        </div>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <div class="area">
+                            <div class="point">
+                                <div class="circle">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div class="line"></div>
+                            </div>
+                            <div>
+                                <div class="year">1987</div>
+                                <div class="flex flex-col gap-0.5 content">
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">01</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">박형길 동문 10대 회장 선임</div>
+                                        </div>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <div class="area">
+                            <div class="point">
+                                <div class="circle">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div class="line"></div>
+                            </div>
+                            <div>
+                                <div class="year">1986</div>
+                                <div class="flex flex-col gap-0.5 content">
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">01</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">유경춘 동문 9대 회장 선임</div>
+                                        </div>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <div class="area">
+                            <div class="point">
+                                <div class="circle">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div class="line"></div>
+                            </div>
+                            <div>
+                                <div class="year">1985</div>
+                                <div class="flex flex-col gap-0.5 content">
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">01</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">이세준 동문 8대 회장 선임</div>
+                                        </div>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <div class="area">
+                            <div class="point">
+                                <div class="circle">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div class="line"></div>
+                            </div>
+                            <div>
+                                <div class="year">1984</div>
+                                <div class="flex flex-col gap-0.5 content">
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">01</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">정이칠 동문 7대 회장 선임</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">01</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">춘계 체육대회 및 추계 등반 연중행사 결의</div>
+                                        </div>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <div class="area">
+                            <div class="point">
+                                <div class="circle">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div class="line"></div>
+                            </div>
+                            <div>
+                                <div class="year">1983</div>
+                                <div class="flex flex-col gap-0.5 content">
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">01</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">김종철 동문 6대 회장 선임</div>
+                                        </div>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <div class="area">
+                            <div class="point">
+                                <div class="circle">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div class="line"></div>
+                            </div>
+                            <div>
+                                <div class="year">1982</div>
+                                <div class="flex flex-col gap-0.5 content">
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">01</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">김태수 동문 5대 회장 선임</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">01</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">재학생 6명에게 ₩1,094,220 장학금 전달</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">01</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">제1회 형설 가족 친선체육대회 개최</div>
+                                        </div>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <div class="area">
+                            <div class="point">
+                                <div class="circle">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div class="line"></div>
+                            </div>
+                            <div>
+                                <div class="year">1981</div>
+                                <div class="flex flex-col gap-0.5 content">
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">01</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">이재만 동문 4대 회장 선임</div>
+                                        </div>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <div class="area">
+                            <div class="point">
+                                <div class="circle">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div class="line"></div>
+                            </div>
+                            <div>
+                                <div class="year">1980</div>
+                                <div class="flex flex-col gap-0.5 content">
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">01</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">정성환 동문 3대 회장 선임</div>
+                                        </div>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <div class="area">
+                            <div class="point">
+                                <div class="circle">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div class="line"></div>
+                            </div>
+                            <div>
+                                <div class="year">1979</div>
+                                <div class="flex flex-col gap-0.5 content">
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">01</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">1대 전정식 동문 2대 회장 재선임</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">01</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">재학생 남·여 각 1명에게 ₩374,240 장학금 전달</div>
+                                        </div>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <div class="area">
+                            <div class="point">
+                                <div class="circle">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div class="line"></div>
+                            </div>
+                            <div>
+                                <div class="year">1978</div>
+                                <div class="flex flex-col gap-0.5 content">
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">02</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">전정식 동문 초대 회장 선임</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">02</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">장학금 ₩253,440 전달, 매년 장학사업 실시</div>
+                                        </div>
+                                                                            <div class="flex gap-2">
+                                            <div
+                                                class="text-main-600 font-bold tracking-tight">01</div>
+                                            <div class="text-gray-600 font-medium leading-snug" style="width: 300px">7명의 발기인 모임 시작</div>
+                                        </div>
+                                                                    </div>
+                            </div>
+                        </div>
+                                    </div>
+            </div>
+        </section>
+    </div>
+    <footer>
+    <div class="container-def grid gap-7">
+        <div class="flex items-end justify-between">
+            <img src="../resource/images/logos/logo-w.svg" alt="로고" title="로고" class="logo">
+            <div class="flex gap-3.5">
+                <a href="https://ysed.jne.go.kr"><span>여수교육청</span><i class="fa-solid fa-arrow-right ms-2 -rotate-45"></i></a>
+                <a href="https://yosuis.hs.jne.kr"><span>여수정보과학고등학교</span><i class="fa-solid fa-arrow-right ms-2 -rotate-45"></i></a>
+            </div>
+        </div>
+
+        <div class="w-full h-px bg-gray-500"></div>
+
+        <div>
+            <div class="flex gap-6 mb-2">
+                <div class="flex gap-2.5">
+                    <div class="text-gray-300">주소</div>
+                    <div class="text-white">전남 여수시 도원로 279 (7층)</div>
+                </div>
+                <div class="flex gap-2.5">
+                    <div class="text-gray-300">대표번호</div>
+                    <div class="text-white">061-653-5775</div>
+                </div>
+                <div class="flex gap-2.5">
+                    <div class="text-gray-300">이메일</div>
+                    <div class="text-white">ksb9066@nate.com</div>
+                </div>
+            </div>
+            <div class="text-gray-400">COPYRIGHT(C) 재단법인 여상형설장학회 ALL RIGHTS RESERVED.</div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

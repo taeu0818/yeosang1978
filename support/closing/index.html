@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="csrf-token" content="yDp9Ym2oIzg2amPvDPzuvDfAZ6gnmOEZfPNs9hjR">
+    <meta name="keywords" content="여상형설장학회,장학회,여수정보과학고등학교">
+    <meta name="description" content="미래를 여는 열쇠, 여러분과 함께합니다.">
+    <meta name="Robots" content="index, follow">
+    <meta property="og:title" content="여상형설장학회">
+    <meta property="og:description" content="미래를 여는 열쇠, 여러분과 함께합니다.">
+    <meta property="og:image" content="http://localhost:8000/og_image.png">
+
+    <meta name="google-site-verification" content="CCyfULBh5F5JmWlSEhpmYNZABgho5wZozdWoUMcOaRM"/>
+
+    <meta name="naver-site-verification" content="9869b213eccba00b2e5593d9e1ef7748bb223705"/>
+    <title>여상형설장학회</title>
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../vendor/fontawesome-6.6.0/css/all.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+        <script type="module" src="http://[::1]:5173/@vite/client"></script><link rel="stylesheet" href="http://[::1]:5173/resources/css/app.css" />    <script src="../../vendor/jquery-3.7.1.js"></script>
+    <script type="module" src="http://[::1]:5173/@vite/client"></script><script type="module" src="http://[::1]:5173/resources/js/app.js"></script>    <script src="../../js/app.js"></script>
+        <script>
+        $(() => {
+            const search = async () => {
+                const type = $('.searchBox select').val();
+                const content = $('.searchBox input').val();
+                location.href = `/support/closing/index/1/${type}/${content}`;
+            }
+            $(document)
+                .on('click', '.page', async ({currentTarget: target}) => {
+                    const page = $(target).data('page');
+                    const path = location.pathname.split('/')
+                    const type = path[5];
+                    const content = path[6];
+                    location.href = `/support/closing/index/${page}${type ? `/${type}/${content}` : ''}`;
+                })
+
+                .on('keydown', '.searchBox button', ({key}) => key === 'Enter' && search())
+                .on('click', '.searchBox button', search)
+        })
+    </script>
+    <script>
+        $(() => {
+            let delayAni;
+            $(document)
+                .on('mousemove', 'header .main-menu .menu , header .sub-menu .depth', () => {
+                    $('header').addClass('active');
+                    clearTimeout(delayAni);
+                    delayAni = null;
+                })
+                .on('mousemove', ({target}) => {
+                    if ($('header').hasClass('active') && !$(target).closest('.sub-menu .depth, .main-menu .menu').length && !delayAni) {
+                        delayAni = setTimeout(() => {
+                            $('header:not(.open)').removeClass('active');
+                            delayAni = null;
+                        }, 500)
+                    }
+                })
+
+            $(window).scroll(() => {
+                const scrollTop = $(window).scrollTop();
+                const maxHeight = $('main#sub').height() - $('header').height();
+                if (scrollTop >= maxHeight) $('header').addClass('open active');
+                else $('header').removeClass('open active');
+            })
+        })
+    </script>
+    <script>
+        $(() => {
+            $(document).find('#sub-layout')
+                .on('click', '.depth', ({currentTarget: target}) => {
+                    if($(target).hasClass('active')) $(target).removeClass('active');
+                    else $('#sub-layout .depth').removeClass('active').filter(target).addClass('active');
+                    $('#sub-layout .depth:not(.active) .sub-menu').animate({height : 0}, {duration: 300});
+                    const openMenu = $('#sub-layout .depth.active');
+                    openMenu.find('.sub-menu').height(0).animate({height : openMenu.find('.sub-menu')[0].scrollHeight}, {duration:400})
+                })
+        })
+    </script>
+</head>
+<body>
+    <header>
+    <div class="main-menu">
+        <div class="container-xl flex items-center">
+            <div class="w-full">
+                <a href="../../index.html" class="logo"></a>
+            </div>
+            <div class="flex shrink-0 font-medium" style="font-size: 22px">
+                <a href="../../about/message.html" class="menu">재단소개</a>
+                <a href="../../introduce/scholarship.html" class="menu">사업안내</a>
+                <a href="../../news/notice/index.html" class="menu">소식/자료</a>
+                <a href="index.html" class="menu">재정/후원</a>
+            </div>
+            <div class="w-full flex justify-end text-lg gap-10">
+                                    <a href="../../auth/login.html">로그인</a>
+                            </div>
+        </div>
+    </div>
+    <div class="sub-menu">
+        <div class="depth">
+            <a href="../../about/message.html" class="menu">인사말</a>
+            <a href="../../about/history.html" class="menu">재단연혁</a>
+            <a href="../../about/organization.html" class="menu">조직도</a>
+        </div>
+        <div class="depth">
+            <a href="../../introduce/service.html" class="menu">사업소개</a>
+            <a href="../../introduce/scholarship.html" class="menu">장학사업</a>
+        </div>
+        <div class="depth">
+            <a href="../../news/notice/index.html" class="menu">공지사항</a>
+            <a href="../../news/media/index.html" class="menu">보도자료</a>
+            <a href="../../news/photo/index.html" class="menu">사진자료</a>
+        </div>
+        <div class="depth">
+            <a href="index.html" class="menu">결산공지</a>
+            <a href="../payment/index.html" class="menu">장학금 지급현황</a>
+            <a href="../donate/index.html" class="menu">후원하기</a>
+        </div>
+    </div>
+</header>
+    <div id="sub-layout">
+    <main id="sub">
+        <img src="../../resource/images/pages/support/visual.jpg" alt="서브페이지 비주얼 이미지"
+             title="서브페이지 비주얼 이미지">
+        <div>결산공지</div>
+    </main>
+    <div class="path">
+        <div class="container-def flex h-full">
+            <div class="line"></div>
+            <a href="../../index.html" class="aspect-square text-xl">
+                <i class="fa-solid fa-home"></i>
+            </a>
+            <div class="line"></div>
+            <div class="depth">
+                <div class="flex justify-between items-center w-full">
+                    <div class="text-xl">재정/후원</div>
+                    <i class="fa-solid fa-chevron-down text-lg"></i>
+                </div>
+                <div class="sub-menu">
+                    <div class="p-1.5 gap-1.5 grid">
+                                                    <a href="../../about/message.html"
+                               class="menu ">재단소개</a>
+                                                    <a href="../../introduce/service.html"
+                               class="menu ">사업안내</a>
+                                                    <a href="../../news/notice/index.html"
+                               class="menu ">소식/자료</a>
+                                                    <a href="index.html"
+                               class="menu active">재정/후원</a>
+                                            </div>
+                </div>
+            </div>
+            <div class="line"></div>
+            <div class="depth">
+                <div class="flex justify-between items-center w-full">
+                    <div class="text-xl">결산공지</div>
+                    <i class="fa-solid fa-chevron-down text-lg"></i>
+                </div>
+                <div class="sub-menu">
+                    <div class="p-1.5 gap-1.5 grid">
+                                                    <a href="index.html"
+                               class="menu active">결산공지</a>
+                                                    <a href="../payment/index.html"
+                               class="menu ">장학금 지급 현황</a>
+                                                    <a href="../donate/index.html"
+                               class="menu ">후원하기</a>
+                                            </div>
+                </div>
+            </div>
+            <div class="line"></div>
+        </div>
+    </div>
+</div>
+    <div id="support_closing">
+        <section>
+            <div class="container-def">
+                <div class="flex items-end mb-5 justify-between">
+                    <div class="text-xl">
+                        총 <span class="font-semibold text-main-600">100</span>개의 게시물을 찾았습니다.
+                    </div>
+                    <div class="flex gap-3">
+                        <div class="w-max px-7 py-3 rounded-full border flex items-center gap-6 searchBox">
+                            <div class="flex gap-4 text-lg">
+                                <select>
+                                                                            <option
+                                            value="title" >제목</option>
+                                                                            <option
+                                            value="author" >작성자</option>
+                                                                            <option
+                                            value="date" >작성일</option>
+                                                                    </select>
+                                <input type="text" class="w-80 focus-visible:outline-0" placeholder="검색어를 입력해주세요.">
+                            </div>
+                            <button class="fa-solid fa-search"></button>
+                        </div>
+                    </div>
+                </div>
+                <table class="tb_1 mb-7">
+                    <colgroup>
+                        <col width="10%">
+                        <col width="50%">
+                        <col width="10%">
+                        <col width="10%">
+                        <col width="10%">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th scope="col">번호</th>
+                        <th scope="col">제목</th>
+                        <th scope="col">작성자</th>
+                        <th scope="col">작성일</th>
+                        <th scope="col">조회수</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                                            <tr>
+                            <td>100</td>
+                            <td class="text-start font-medium text-gray-700">
+                                <a href="read/72.html" class="hover:underlinedf">[TEST] 테스트용 제목입니다</a>
+                            </td>
+                            <td>관리자</td>
+                            <td>2025-05-17</td>
+                            <td>100</td>
+                        </tr>
+                                            <tr>
+                            <td>99</td>
+                            <td class="text-start font-medium text-gray-700">
+                                <a href="read/73.html" class="hover:underlinedf">[TEST] 테스트용 제목입니다</a>
+                            </td>
+                            <td>관리자</td>
+                            <td>2025-05-17</td>
+                            <td>100</td>
+                        </tr>
+                                            <tr>
+                            <td>98</td>
+                            <td class="text-start font-medium text-gray-700">
+                                <a href="read/74.html" class="hover:underlinedf">[TEST] 테스트용 제목입니다</a>
+                            </td>
+                            <td>관리자</td>
+                            <td>2025-05-17</td>
+                            <td>100</td>
+                        </tr>
+                                            <tr>
+                            <td>97</td>
+                            <td class="text-start font-medium text-gray-700">
+                                <a href="read/75.html" class="hover:underlinedf">[TEST] 테스트용 제목입니다</a>
+                            </td>
+                            <td>관리자</td>
+                            <td>2025-05-17</td>
+                            <td>100</td>
+                        </tr>
+                                            <tr>
+                            <td>96</td>
+                            <td class="text-start font-medium text-gray-700">
+                                <a href="read/76.html" class="hover:underlinedf">[TEST] 테스트용 제목입니다</a>
+                            </td>
+                            <td>관리자</td>
+                            <td>2025-05-17</td>
+                            <td>100</td>
+                        </tr>
+                                            <tr>
+                            <td>95</td>
+                            <td class="text-start font-medium text-gray-700">
+                                <a href="read/77.html" class="hover:underlinedf">[TEST] 테스트용 제목입니다</a>
+                            </td>
+                            <td>관리자</td>
+                            <td>2025-05-17</td>
+                            <td>100</td>
+                        </tr>
+                                            <tr>
+                            <td>94</td>
+                            <td class="text-start font-medium text-gray-700">
+                                <a href="read/78.html" class="hover:underlinedf">[TEST] 테스트용 제목입니다</a>
+                            </td>
+                            <td>관리자</td>
+                            <td>2025-05-17</td>
+                            <td>100</td>
+                        </tr>
+                                            <tr>
+                            <td>93</td>
+                            <td class="text-start font-medium text-gray-700">
+                                <a href="read/79.html" class="hover:underlinedf">[TEST] 테스트용 제목입니다</a>
+                            </td>
+                            <td>관리자</td>
+                            <td>2025-05-17</td>
+                            <td>100</td>
+                        </tr>
+                                            <tr>
+                            <td>92</td>
+                            <td class="text-start font-medium text-gray-700">
+                                <a href="read/80.html" class="hover:underlinedf">[TEST] 테스트용 제목입니다</a>
+                            </td>
+                            <td>관리자</td>
+                            <td>2025-05-17</td>
+                            <td>100</td>
+                        </tr>
+                                            <tr>
+                            <td>91</td>
+                            <td class="text-start font-medium text-gray-700">
+                                <a href="read/81.html" class="hover:underlinedf">[TEST] 테스트용 제목입니다</a>
+                            </td>
+                            <td>관리자</td>
+                            <td>2025-05-17</td>
+                            <td>100</td>
+                        </tr>
+                                        </tbody>
+                </table>
+                <div class="flex items-center mt-10">
+                    <div class="w-full"></div>
+                    <div class="pagination flex-shrink-0">
+                        <div class="page" data-page="1"><i
+                                class="fa-solid fa-chevron-left"></i></div>
+                        <div class="pages">
+                                                            <div class="page active" data-page="1">1</div>
+                                                            <div class="page " data-page="2">2</div>
+                                                            <div class="page " data-page="3">3</div>
+                                                            <div class="page " data-page="4">4</div>
+                                                            <div class="page " data-page="5">5</div>
+                                                            <div class="page " data-page="6">6</div>
+                                                            <div class="page " data-page="7">7</div>
+                                                            <div class="page " data-page="8">8</div>
+                                                            <div class="page " data-page="9">9</div>
+                                                            <div class="page " data-page="10">10</div>
+                                                    </div>
+                        <div class="page" data-page="10"><i
+                                class="fa-solid fa-chevron-right"></i></div>
+                    </div>
+                    <div class="w-full flex justify-end">
+                                            </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer>
+    <div class="container-def grid gap-7">
+        <div class="flex items-end justify-between">
+            <img src="../../resource/images/logos/logo-w.svg" alt="로고" title="로고" class="logo">
+            <div class="flex gap-3.5">
+                <a href="https://ysed.jne.go.kr"><span>여수교육청</span><i class="fa-solid fa-arrow-right ms-2 -rotate-45"></i></a>
+                <a href="https://yosuis.hs.jne.kr"><span>여수정보과학고등학교</span><i class="fa-solid fa-arrow-right ms-2 -rotate-45"></i></a>
+            </div>
+        </div>
+
+        <div class="w-full h-px bg-gray-500"></div>
+
+        <div>
+            <div class="flex gap-6 mb-2">
+                <div class="flex gap-2.5">
+                    <div class="text-gray-300">주소</div>
+                    <div class="text-white">전남 여수시 도원로 279 (7층)</div>
+                </div>
+                <div class="flex gap-2.5">
+                    <div class="text-gray-300">대표번호</div>
+                    <div class="text-white">061-653-5775</div>
+                </div>
+                <div class="flex gap-2.5">
+                    <div class="text-gray-300">이메일</div>
+                    <div class="text-white">ksb9066@nate.com</div>
+                </div>
+            </div>
+            <div class="text-gray-400">COPYRIGHT(C) 재단법인 여상형설장학회 ALL RIGHTS RESERVED.</div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
