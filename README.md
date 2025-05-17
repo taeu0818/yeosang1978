@@ -1,5 +1,9 @@
 # 여상형설장학회
 
+<video width="100%" controls>
+    <source src="./preview.mp4" type="video/mp4"></source>
+</video>
+
 > [**yeosang1978.kr**](http://yeosang1978.kr) 에서 서비스 중  
 > 교내 장학사 요청으로 제작한 장학회 공식 웹페이지입니다.
 >
@@ -107,7 +111,7 @@
 
 개발은 후배들이 유지보수해야하니까 걍 laravel 로 풀스택했음 laravel + blade 로 SSR 기반 풀스택 
 개발했고 UI는 tailwind 썼음 laravel 에서 tailwind 쓸꺼면 https://tailwindcss.com/docs/installation/
-framework-guides/laravel/vite 여기에 Using Vite 방법으로 진행하셈(근데 laravel 쓰지는 말고 ㅋㅋ) 
+framework-guides/laravel/vite 여기에 Using Vite 방법으로 진행하셈(그렇다고 laravel 쓰지는 말고 ㅋㅋ) 
 
 그리고 글쓰기 기능 만들어달라길래 좀 애먹었는데 ckeditor로 해결했음 무료 웹 에디터중에 이게 1티어임 대신 
 설명 좀 빈약함
